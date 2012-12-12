@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../hooks/pre_commit/pre_commit.flog.rb'
+require_relative '../hooks/pre_commit/pre_commit_flog.rb'
 
 describe FlogPreCommit do
   context "#to_s" do

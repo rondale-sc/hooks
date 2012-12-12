@@ -18,4 +18,4 @@ fi
 rvm reload > /dev/null
 
 # List pre-commit hook files here
-rvm-auto-ruby .git/hooks/pre-commit.flog.rb
+rvm-auto-ruby .git/hooks/pre_commit_flog.rb
