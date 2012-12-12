@@ -19,14 +19,20 @@ class FlogPreCommit
   end
 
   def to_s
+    output = generate_output.join("\n")
+    $stdout.puts output
+    output
+  end
+
+  private
+
+  def generate_output
     staged_files.collect do |file|
       next unless file =~ /\.rb\z/
       flog.flog(file)
       "Flog: Avg ( #{ average(flog) } ), Total ( #{ flog.total } ) - #{file}."
-    end.join("\n")
+    end
   end
-
-  private
 
   def get_staged_files_from_git
     `git diff --cached --name-only`.split
