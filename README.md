@@ -5,7 +5,7 @@ Simple repository to store custom git hooks.
 
 #Installation
 
-Copy custom_git_hooks into the root of your project.
+Copy hooks into the root of your project.
 
 ```sh
 # cd /path/to/root/of/app
